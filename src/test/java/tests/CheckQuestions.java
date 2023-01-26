@@ -15,7 +15,6 @@ import static org.junit.Assert.assertEquals;
 public class CheckQuestions {
     WebDriver driver;
 
-
     @Before
     public void startUp() {
         WebDriverManager.chromedriver().setup();
@@ -24,13 +23,14 @@ public class CheckQuestions {
         MainPage mainPage = new MainPage(driver);
         mainPage.open();
     }
+
     @Test
     public void howMuchClickCheck() {
 
         MainPage mainPage = new MainPage(driver);
         mainPage.howMuchClick();
 
-        assertEquals( "Ответ не совпадает", mainPage.howMuchExpectedAnswer, mainPage.howMuchClick());
+        assertEquals("Ответ не совпадает", mainPage.howMuchExpectedAnswer, mainPage.howMuchClick());
     }
 
     @Test
@@ -39,7 +39,7 @@ public class CheckQuestions {
         MainPage mainPage = new MainPage(driver);
         mainPage.fewScooterClick();
 
-        assertEquals( "Ответ не совпадает", mainPage.fewScooterExpectedAnswer, mainPage.fewScooterClick());
+        assertEquals("Ответ не совпадает", mainPage.fewScooterExpectedAnswer, mainPage.fewScooterClick());
     }
 
     @Test
@@ -48,7 +48,7 @@ public class CheckQuestions {
         MainPage mainPage = new MainPage(driver);
         mainPage.rentTimeClick();
 
-        assertEquals( "Ответ не совпадает", mainPage.rentTimeExpectedAnswer, mainPage.rentTimeClick());
+        assertEquals("Ответ не совпадает", mainPage.rentTimeExpectedAnswer, mainPage.rentTimeClick());
     }
 
     @Test
@@ -57,7 +57,7 @@ public class CheckQuestions {
         MainPage mainPage = new MainPage(driver);
         mainPage.orderTodayClick();
 
-        assertEquals( "Ответ не совпадает", mainPage.orderTodayExpectedAnswer, mainPage.orderTodayClick());
+        assertEquals("Ответ не совпадает", mainPage.orderTodayExpectedAnswer, mainPage.orderTodayClick());
     }
 
     @Test
@@ -66,7 +66,7 @@ public class CheckQuestions {
         MainPage mainPage = new MainPage(driver);
         mainPage.howMuchClick();
 
-        assertEquals( "Ответ не совпадает", mainPage.extendOrderExpectedAnswer, mainPage.extendOrderClick());
+        assertEquals("Ответ не совпадает", mainPage.extendOrderExpectedAnswer, mainPage.extendOrderClick());
     }
 
     @Test
@@ -75,7 +75,7 @@ public class CheckQuestions {
         MainPage mainPage = new MainPage(driver);
         mainPage.takeChargerClick();
 
-        assertEquals( "Ответ не совпадает", mainPage.takeChargerExpectedAnswer, mainPage.takeChargerClick());
+        assertEquals("Ответ не совпадает", mainPage.takeChargerExpectedAnswer, mainPage.takeChargerClick());
     }
 
     @Test
@@ -84,7 +84,7 @@ public class CheckQuestions {
         MainPage mainPage = new MainPage(driver);
         mainPage.cancelOrderClick();
 
-        assertEquals( "Ответ не совпадает", mainPage.cancelOrderExpectedAnswer, mainPage.cancelOrderClick());
+        assertEquals("Ответ не совпадает", mainPage.cancelOrderExpectedAnswer, mainPage.cancelOrderClick());
     }
 
     @Test
@@ -93,14 +93,12 @@ public class CheckQuestions {
         MainPage mainPage = new MainPage(driver);
         mainPage.liveMkadClick();
 
-        assertEquals( "Ответ не совпадает", mainPage.liveMkadExpectedAnswer, mainPage.liveMkadClick());
+        assertEquals("Ответ не совпадает", mainPage.liveMkadExpectedAnswer, mainPage.liveMkadClick());
     }
-
 
     @After
-    public void tearDown(){
+    public void tearDown() {
         driver.quit();
     }
-
 
 }
